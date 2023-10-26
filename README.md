@@ -71,13 +71,19 @@ Create an account with IpGeolocation (app.ipgeolocation.io) to obtain an API key
 <img src="https://i.imgur.com/aLhVvYv.png" height="80%" width="80%" alt="Powershell"/>
 <br />
    <p align="center">
- #5 
+ #7 
 <p align="center">
 In your Log Analytics Workspace, create a new custome log (MMA-based). Use the log file in your Virtual Machine to train this custom log and also use this Collection path from your Virtual Machine C:\ProgramData\failed_rdp.log. Test your custom log using the query below. 
    FAILED_RDP_WITH_GEO_CL
 | parse RawData with * "latitude:" Latitude ",longitude:" Longitude ",destinationhost:" DestinationHost ",username:" Username ",sourcehost:" Sourcehost ",state:" State ", country:" Country ",label:" Label ",timestamp:" Timestamp 
    <br/>
-<img src="https://i.imgur.com/UXgU5O2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/UXgU5O2.png" height="80%" width="80%" alt="Custom Log - Log Analytics Workspace"/>
+<br />
+<p align="center">
+ #8 
+<p align="center">
+Back in Sentinel, add a new Workbook. This will help us visualize the logs being extracted from the custom log we created in the Log Analytics Workspace. Use the query below when adding the new Workbook.<br/>
+<img src="https://i.imgur.com/H2YqgKA.png" height="80%" width="80%" alt="Sentinel - New Workbook"/>
 <br />
 <!--
  ```diff
