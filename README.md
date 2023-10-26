@@ -67,16 +67,13 @@ Log into your Virtual Machine using Remote Desktop. Turn off the Firewall to mak
 <p align="center">
  #6 
 <p align="center">
-Create an account with IpGeolocation (app.ipgeolocation.io) to obtain an API key needed for the script used in this step. Open Powershell ISE, create a new script, then paste the script below. RUN the script and do not close. <br/>
+Create an account with <a href="https://app.ipgeolocation.io">IPGeolocation</a>  to obtain an API key needed for the script used in this step. Open Powershell ISE in the Virtual Machine, create a new script, then paste this <a href="https://github.com/nicoSec/AzureSIEMLab/blob/main/Log_Exporter.ps1">Log Exporter</a> script. RUN the script and do not close powershell. <br/>
 <img src="https://i.imgur.com/aLhVvYv.png" height="80%" width="80%" alt="Powershell"/>
-<br />
-   <p align="center">
+<p align="center">
  #7 
 <p align="center">
-In your Log Analytics Workspace, create a new custome log (MMA-based). Use the log file in your Virtual Machine to train this custom log and also use this Collection path from your Virtual Machine C:\ProgramData\failed_rdp.log. Test your custom log using the query below. 
-   FAILED_RDP_WITH_GEO_CL
-| parse RawData with * "latitude:" Latitude ",longitude:" Longitude ",destinationhost:" DestinationHost ",username:" Username ",sourcehost:" Sourcehost ",state:" State ", country:" Country ",label:" Label ",timestamp:" Timestamp 
-   <br/>
+In your Log Analytics Workspace, create a new custome log (MMA-based). Use the log file in your Virtual Machine to train this custom log and also use this Collection path from your Virtual Machine C:\ProgramData\failed_rdp.log. Test your custom log using the query below.
+<br/>
 <img src="https://i.imgur.com/UXgU5O2.png" height="80%" width="80%" alt="Custom Log - Log Analytics Workspace"/>
 <br />
 <p align="center">
