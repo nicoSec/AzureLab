@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-ENTER DESCRIPTION OF LAB HERE
+In this immersive cybersecurity lab, we harness the power of Microsoft Azure to construct a honeypot system, utilizing a deliberately vulnerable Virtual Machine. Our primary objective is to not only set up this honeypot but to comprehensively monitor and log all failed Remote Desktop Protocol (RDP) login attempts, commonly referred to as "brute force attacks," originating from across the globe. We then leverage Azure Sentinel, a robust Security Information and Event Management (SIEM) solution, to dissect, analyze, and respond to these security incidents. Additionally, we employ advanced geospatial analysis to visualize the geographical origins of these cyberattacks.
 <br/>
 
 
