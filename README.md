@@ -1,4 +1,4 @@
-<h1>SOC and Honeypot in Azure</h1>
+<h1>Honeypot and SIEM in Azure</h1>
 
 
 <h2>Description</h2>
