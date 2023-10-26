@@ -38,33 +38,47 @@ ENTER DESCRIPTION OF LAB HERE
  #1 
 <p align="center">
 Create a virutal machine to implement your honeypot.<br/>
-<img src="https://i.imgur.com/nu0Hs9A.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/nu0Hs9A.png" height="80%" width="80%" alt="Virtual Machine"/>
 <br />
 <p align="center">
  #2 
 <p align="center">
 Create a Log Analytics Workspace. This will allow us to ingest logs from the Virtual Machine.<br/>
-<img src="https://i.imgur.com/DFVr3SB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DFVr3SB.png" height="80%" width="80%" alt="Log Analytics Workspace"/>
 <br />
 <p align="center">
  #3 
 <p align="center">
 We will enable the ability to gather the logs from the Virtual Machine using Microsoft Defender for Cloud. In Environment Settings click on the Log Analytics Workspace that was created in the previous step. Once your in Defender Plans, turn Servers on and save, then in Data collection select All Events and save.<br/>
-<img src="https://i.imgur.com/QBdnnHJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/QBdnnHJ.png" height="80%" width="80%" alt="Defender for Cloud"/>
 <br />
 <p align="center">
  #4 
 <p align="center">
 We will now add Microsoft Sentinel. This is the SIEM used to visualize the attack data. Choose your Log Analytics Workspace and Add.<br/>
-<img src="https://i.imgur.com/5cm7bFj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/5cm7bFj.png" height="80%" width="80%" alt="Sentinel"/>
 <br />
 <p align="center">
  #5 
 <p align="center">
-Log into your Virtual Machine using Remote Desktop. Turn off the Firewall to make this Virtual Machine vulnerable to outside connections. Make sure to turn the Firewall off in all 3 locations (Domain Profile, Private Profile, Public Profile), <br/>
-<img src="https://i.imgur.com/b634SJn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Log into your Virtual Machine using Remote Desktop. Turn off the Firewall to make this Virtual Machine vulnerable to outside connections. Make sure to turn the Firewall off in all 3 locations (Domain Profile, Private Profile, Public Profile). <br/>
+<img src="https://i.imgur.com/b634SJn.png" height="80%" width="80%" alt="VM Firewall"/>
 <br />
-
+<p align="center">
+ #6 
+<p align="center">
+Create an account with IpGeolocation (app.ipgeolocation.io) to obtain an API key needed for the script used in this step. Open Powershell ISE, create a new script, then paste the script below. RUN the script and do not close. <br/>
+<img src="https://i.imgur.com/aLhVvYv.png" height="80%" width="80%" alt="Powershell"/>
+<br />
+   <p align="center">
+ #5 
+<p align="center">
+In your Log Analytics Workspace, create a new custome log (MMA-based). Use the log file in your Virtual Machine to train this custom log and also use this Collection path from your Virtual Machine C:\ProgramData\failed_rdp.log. Test your custom log using the query below. 
+   FAILED_RDP_WITH_GEO_CL
+| parse RawData with * "latitude:" Latitude ",longitude:" Longitude ",destinationhost:" DestinationHost ",username:" Username ",sourcehost:" Sourcehost ",state:" State ", country:" Country ",label:" Label ",timestamp:" Timestamp 
+   <br/>
+<img src="https://i.imgur.com/UXgU5O2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
 <!--
  ```diff
 - text in red
