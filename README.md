@@ -37,10 +37,33 @@ ENTER DESCRIPTION OF LAB HERE
 <p align="center">
  #1 
 <p align="center">
-Create a virutal machine to implement your honeypot. Below are the details used for this machine.  <br/>
+Create a virutal machine to implement your honeypot.<br/>
 <img src="https://i.imgur.com/nu0Hs9A.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-
+<p align="center">
+ #2 
+<p align="center">
+Create a Log Analytics Workspace. This will allow us to ingest logs from the Virtual Machine.<br/>
+<img src="https://i.imgur.com/DFVr3SB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<p align="center">
+ #3 
+<p align="center">
+We will enable the ability to gather the logs from the Virtual Machine using Microsoft Defender for Cloud. In Environment Settings click on the Log Analytics Workspace that was created in the previous step. Once your in Defender Plans, turn Servers on and save, then in Data collection select All Events and save.<br/>
+<img src="https://i.imgur.com/QBdnnHJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<p align="center">
+ #4 
+<p align="center">
+We will now add Microsoft Sentinel. This is the SIEM used to visualize the attack data. Choose your Log Analytics Workspace and Add.<br/>
+<img src="https://i.imgur.com/5cm7bFj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<p align="center">
+ #5 
+<p align="center">
+Log into your Virtual Machine using Remote Desktop. Turn off the Firewall to make this Virtual Machine vulnerable to outside connections. Make sure to turn the Firewall off in all 3 locations (Domain Profile, Private Profile, Public Profile), <br/>
+<img src="https://i.imgur.com/b634SJn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
 
 <!--
  ```diff
