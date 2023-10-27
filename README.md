@@ -79,8 +79,15 @@ In your Log Analytics Workspace, create a new custome log (MMA-based). Use the l
 <p align="center">
  #8 
 <p align="center">
-Back in Sentinel, add a new Workbook. This will help us visualize the logs being extracted from the custom log we created in the Log Analytics Workspace. Use the query below when adding the new Workbook.<br/>
-<img src="https://i.imgur.com/H2YqgKA.png" height="80%" width="80%" alt="Sentinel - New Workbook"/>
+Test your custome log using the name of the custom log you created in the previous step
+<br/>
+<img src="https://i.imgur.com/QiKb3bN.png" height="80%" width="80%" alt="Sentinel - New Workbook"/>
+<br />
+<p align="center">
+ #9 
+<p align="center">
+Back in Sentinel, add a new Workbook. This will help us begin to visualize the logs being extracted from the custom log we created in the Log Analytics Workspace. Use this FAILED RDP query when adding the new Workbook.<br/>
+<img src="https://i.imgur.com/ltiRg7D.png" height="80%" width="80%" alt="Sentinel - New Workbook"/>
 <br />
 <!--
  ```diff
