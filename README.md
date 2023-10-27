@@ -72,9 +72,9 @@ Create an account with <a href="https://app.ipgeolocation.io">IPGeolocation</a> 
 <p align="center">
  #7 
 <p align="center">
-In your Log Analytics Workspace, create a new custome log (MMA-based). Use the log file in your Virtual Machine to train this custom log and also use this Collection path from your Virtual Machine C:\ProgramData\failed_rdp.log. Test your custom log using the query below.
+In your Log Analytics Workspace, create a new custome log (MMA-based). Use the log file in your Virtual Machine to train this custom log and also use this Collection path from your Virtual Machine C:\ProgramData\failed_rdp.log.
 <br/>
-<img src="https://i.imgur.com/UXgU5O2.png" height="80%" width="80%" alt="Custom Log - Log Analytics Workspace"/>
+<img src="https://i.imgur.com/ajmDf8b.png" height="80%" width="80%" alt="Custom Log - Log Analytics Workspace"/>
 <br />
 <p align="center">
  #8 
