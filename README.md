@@ -98,7 +98,7 @@ Edit and remove the two default widgets. Add new Query and use this <a href="htt
 <p align="center">
  #11 
 <p align="center">
-Under Visualization, choose Map to plot the source location of the Failed RDP logs.<br/>
+Under Visualization, choose Map to plot the source location of the Failed RDP logs.The map below shows 1 failed attempt which is from my computer during testing.<br/>
 <img src="https://i.imgur.com/mhQAKaV.png" height="80%" width="80%" alt="Map Setup"/>
 <br />
 <p align="center">
