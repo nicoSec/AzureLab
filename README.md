@@ -81,7 +81,7 @@ In your Log Analytics Workspace, create a new custome log (MMA-based). Use the l
 <p align="center">
 Test your custome log using the name of the custom log you created in the previous step
 <br/>
-<img src="https://i.imgur.com/QiKb3bN.png" height="80%" width="80%" alt="Sentinel - New Workbook"/>
+<img src="https://i.imgur.com/QiKb3bN.png" height="80%" width="80%" alt="Custom Log"/>
 <br />
 <p align="center">
  #9 
@@ -93,13 +93,19 @@ Back in Sentinel, add a new Workbook. This will help us begin to visualize the l
  #10 
 <p align="center">
 Edit and remove the two default widgets. Add new Query and use this <a href="https://github.com/nicoSec/AzureSIEMLab/blob/main/FailedRDPquery">Failed RDP Query</a> to set up the new Workbook.<br/>
-<img src="https://i.imgur.com/ltiRg7D.png" height="80%" width="80%" alt="Sentinel - New Workbook"/>
+<img src="https://i.imgur.com/ltiRg7D.png" height="80%" width="80%" alt="Workbook Query"/>
 <br />
 <p align="center">
  #11 
 <p align="center">
 Under Visualization, choose Map to plot the source location of the Failed RDP logs.<br/>
-<img src="https://i.imgur.com/mhQAKaV.png" height="80%" width="80%" alt="Sentinel - New Workbook"/>
+<img src="https://i.imgur.com/mhQAKaV.png" height="80%" width="80%" alt="Map Setup"/>
+<br />
+<p align="center">
+ #12
+<p align="center">
+This is what our honepot looks like after 24 hourse of being exposed to the Internet.<br/>
+<img src="https://i.imgur.com/hRQ78k2.png" height="80%" width="80%" alt="Results"/>
 <br />
 <!--
  ```diff
