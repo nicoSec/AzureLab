@@ -86,8 +86,20 @@ Test your custome log using the name of the custom log you created in the previo
 <p align="center">
  #9 
 <p align="center">
-Back in Sentinel, add a new Workbook. This will help us begin to visualize the logs being extracted from the custom log we created in the Log Analytics Workspace. Use this FAILED RDP query when adding the new Workbook.<br/>
+Back in Sentinel, add a new Workbook. This will help us begin to visualize the logs being extracted from the custom log we created in the Log Analytics Workspace.<br/>
+<img src="https://i.imgur.com/01quWQg.png" height="80%" width="80%" alt="Sentinel - New Workbook"/>
+<br />
+<p align="center">
+ #10 
+<p align="center">
+Edit and remove the two default widgets. Add new Query and use this <a href="https://github.com/nicoSec/AzureSIEMLab/blob/main/FailedRDPquery">Failed RDP Query</a> to set up the new Workbook.<br/>
 <img src="https://i.imgur.com/ltiRg7D.png" height="80%" width="80%" alt="Sentinel - New Workbook"/>
+<br />
+<p align="center">
+ #11 
+<p align="center">
+Under Visualization, choose Map to plot the source location of the Failed RDP logs.<br/>
+<img src="https://i.imgur.com/mhQAKaV.png" height="80%" width="80%" alt="Sentinel - New Workbook"/>
 <br />
 <!--
  ```diff
