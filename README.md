@@ -105,7 +105,7 @@ Under Visualization, choose Map to plot the source location of the Failed RDP lo
  #12
 <p align="center">
 This is what our honepot looks like after 24 hourse of being exposed to the Internet.<br/>
-<img src="https://i.imgur.com/hRQ78k2.png" height="80%" width="80%" alt="Results"/>
+<img src="https://i.imgur.com/OeR8OYC.png" height="80%" width="80%" alt="Results"/>
 <br />
 <!--
  ```diff
