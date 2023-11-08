@@ -10,7 +10,7 @@ In this immersive cybersecurity lab, we harness the power of Microsoft Azure to 
 
 - Azure
 - Virtual Machines
-- Sentinel
+- Microsoft Sentinel
 - Log Analytics Workspace
 - Powershell
 - API - [ipgeolocation](https://app.ipgeolocation.io/)
