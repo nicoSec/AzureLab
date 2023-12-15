@@ -55,19 +55,19 @@ We will enable the ability to gather the logs from the Virtual Machine using Mic
 <p align="center">
  #4 
 <p align="center">
-We will now add Microsoft Sentinel. This is the SIEM used to visualize the attack data. Choose your Log Analytics Workspace and Add.<br/>
+We will now add Microsoft Sentinel. This is the SIEM used to collect logs and map the attack data. Choose your Log Analytics Workspace and Add.<br/>
 <img src="https://i.imgur.com/5cm7bFj.png" height="80%" width="80%" alt="Sentinel"/>
 <br />
 <p align="center">
  #5 
 <p align="center">
-Log into your Virtual Machine using Remote Desktop. Turn off the Firewall to make this Virtual Machine vulnerable to outside connections. Make sure to turn the Firewall off in all 3 locations (Domain Profile, Private Profile, Public Profile). <br/>
+Log into your Virtual Machine using Remote Desktop. Turn off the Firewall to expose this Virtual Machine to outside connections. Make sure to turn the Firewall off in all 3 locations (Domain Profile, Private Profile, Public Profile). <br/>
 <img src="https://i.imgur.com/b634SJn.png" height="80%" width="80%" alt="VM Firewall"/>
 <br />
 <p align="center">
  #6 
 <p align="center">
-Create an account with <a href="https://app.ipgeolocation.io">IPGeolocation</a>  to obtain an API key needed for the script used in this step. Open Powershell ISE in the Virtual Machine, create a new script, then paste this <a href="https://github.com/nicoSec/AzureSIEMLab/blob/main/Log_Exporter.ps1">Log Exporter</a> script. RUN the script and do not close powershell. <br/>
+Create an account with <a href="https://app.ipgeolocation.io">IPGeolocation</a>  to obtain the API key needed for the script used in this step. Open Powershell ISE in the Virtual Machine, create a new script, then paste this <a href="https://github.com/nicoSec/AzureSIEMLab/blob/main/Log_Exporter.ps1">Log Exporter</a> script. RUN the script and do not close powershell. <br/>
 <img src="https://i.imgur.com/aLhVvYv.png" height="80%" width="80%" alt="Powershell"/>
 <p align="center">
  #7 
@@ -79,7 +79,7 @@ In your Log Analytics Workspace, create a new custome log (MMA-based). Use the l
 <p align="center">
  #8 
 <p align="center">
-Test your custome log using the name of the custom log you created in the previous step
+Test your custom log using the name of the custom log you created in the previous step.
 <br/>
 <img src="https://i.imgur.com/QiKb3bN.png" height="80%" width="80%" alt="Custom Log"/>
 <br />
@@ -98,13 +98,13 @@ Edit and remove the two default widgets. Add new Query and use this <a href="htt
 <p align="center">
  #11 
 <p align="center">
-Under Visualization, choose Map to plot the source location of the Failed RDP logs.The map below shows 1 failed attempt which is from my computer during testing.<br/>
+Under Visualization, choose Map to plot the source location of the Failed RDP logs. The map below shows 1 failed attempt which is from my computer during testing.<br/>
 <img src="https://i.imgur.com/mhQAKaV.png" height="80%" width="80%" alt="Map Setup"/>
 <br />
 <p align="center">
  #12
 <p align="center">
-This is what our honepot looks like after 24 hourse of being exposed to the Internet.<br/>
+This map shows us the many locations where our honeypot is being attacked from after 24 hours of being exposed to the Internet.<br/>
 <img src="https://i.imgur.com/OeR8OYC.png" height="80%" width="80%" alt="Results"/>
 <br />
 <!--
